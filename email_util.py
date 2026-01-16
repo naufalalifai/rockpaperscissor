@@ -17,13 +17,12 @@ def send_winner_email(winner_name: str):
     receiver_email = sender_email
 
     msg = EmailMessage()
-    msg["Subject"] = "🎉 Rock Paper Scissors - You Won!"
+    msg["Subject"] = "Rock Paper Scissors - You Won!"
     msg["From"] = sender_email
     msg["To"] = receiver_email
     msg.set_content(
         f"Congratulations {winner_name}!\n\n"
         "You won the Rock Paper Scissors game.\n\n"
-        "— RPS Network Game Server"
     )
 
     try:
